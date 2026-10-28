@@ -178,13 +178,37 @@ Try these without looking back, then check below.
 
 1. **Scenario:** you have 1,000 shifts of café sales. The takings column has 50 missing values. Would
    you drop those 50 rows or fill them with the average? Why?
+
+```
+Leave blank, it could be there were no sales
+```
+
 2. **True or false:** `.describe()` gives you the same kind of output for a column of café names as
    for a column of takings.
+
+```
+False, describe() gives you the statistics for all numerical columns
+```
+
 3. **Scenario:** a takings column contains `-999` in four rows. You fill the missing values with the
    column median and then remove the -999s. What went wrong?
+
+```
+The median already took the -999 into account, and the data was already skewed
+```
+
 4. **Definition:** what is the difference between an integer and a float — and why might a column of
    *counts* show up as a float?
+
+```
+Integer = whole number, float = decimal. Maybe for this the user keyed it in accidentally
+```
+
 5. **Regex:** you want to turn `"S$1,240.50"` into a number. What kind of pattern would you look for?
+
+```
+Look for $ or S$ or $S, look for commas and remove
+```
 
 <details>
 <summary>Suggested answers</summary>
